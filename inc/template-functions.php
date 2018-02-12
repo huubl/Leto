@@ -39,6 +39,27 @@ function leto_body_classes( $classes ) {
 add_filter( 'body_class', 'leto_body_classes' );
 
 /**
+ * Add hentry class to products in search
+ *
+ */
+function leto_add_class_product_search( $classes, $class = '', $post_id = '' ) {
+
+	$classes[] = '';
+
+	if ( class_exists( 'WooCommerce' ) ) {
+		$product = wc_get_product( $post_id );
+
+		if( $product && is_search()  ) {
+			$classes[] = 'hentry';
+		}
+	}
+
+	return $classes;		
+
+} 
+add_filter( 'post_class', 'leto_add_class_product_search', 3, 20 );
+
+/**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
 function leto_pingback_header() {
