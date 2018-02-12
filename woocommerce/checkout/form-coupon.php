@@ -27,7 +27,7 @@ if ( ! wc_coupons_enabled() ) {
 echo '<div class="col-xs-12 col-sm-12 col-md-5 col-form-coupon">';
 
 if ( empty( WC()->cart->applied_coupons ) ) {
-	$info_message = apply_filters( 'woocommerce_checkout_coupon_message', __( 'Have a coupon?', 'woocommerce' ) . ' <a href="#" class="showcoupon">' . __( 'Click here to enter your code', 'woocommerce' ) . '</a>' );
+	$info_message = apply_filters( 'woocommerce_checkout_coupon_message', __( 'Have a coupon?', 'leto' ) . ' <a href="#" class="showcoupon">' . __( 'Click here to enter your code', 'leto' ) . '</a>' );
 	wc_print_notice( $info_message, 'notice' );
 }
 ?>
@@ -35,11 +35,11 @@ if ( empty( WC()->cart->applied_coupons ) ) {
 <form class="checkout_coupon" method="post" style="display:none">
 
 	<p class="form-row form-row-first">
-		<input type="text" name="coupon_code" class="input-text" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" id="coupon_code" value="" />
+		<input type="text" name="coupon_code" class="input-text" placeholder="<?php esc_attr_e( 'Coupon code', 'leto' ); ?>" id="coupon_code" value="" />
 	</p>
 
 	<p class="form-row form-row-last">
-		<button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
+		<button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'leto' ); ?>"><?php esc_html_e( 'Apply coupon', 'leto' ); ?></button>
 	</p>
 
 	<div class="clear"></div>
