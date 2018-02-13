@@ -13,7 +13,7 @@
 		<div class="product">
 		
 			<div class="row">
-				<div class="hidden-xs col-sm-7 col-sm-push-5 modal-quickview__images modal-matchHeight">
+				<div class="col-xs-12 col-sm-7 col-sm-push-5 modal-quickview__images modal-matchHeight">
 					<div class="quickview-gallery">
 					<?php
 						$gallery_ids = $product->get_gallery_image_ids();
