@@ -8077,6 +8077,11 @@ object {
   font-size: 18px;
 }
 
+.woocommerce-cart table.cart td.actions button.button[name="update_cart"]::before {
+  position: static;
+  margin-right: 5px;
+}
+
 .countdown-rtl {
   direction: rtl;
 }
