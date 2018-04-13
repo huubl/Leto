@@ -3563,6 +3563,8 @@ form.cart:after,
 .list-categories-section .category-item__img {
   position: relative;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }

@@ -674,6 +674,8 @@
 		&__img {
 			position: relative;
 			overflow: hidden;
+			background-repeat: no-repeat;
+			background-size: cover;
 			@include transition(all .3s ease-in-out);
 
 			&:before {
