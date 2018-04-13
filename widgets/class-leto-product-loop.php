@@ -8,7 +8,7 @@
 class Leto_Product_Loop extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'leto_product_loop', 'description' => __( 'Display products in a grid.', 'leto') );
+		$widget_ops = array('classname' => 'leto_product_loop', 'description' => __( 'Display products in a grid or carousel.', 'leto') );
 		parent::__construct(false, $name = __('Leto: Product loop', 'leto'), $widget_ops);
 		$this->alt_option_name = 'leto_product_loop';
 	}
@@ -50,6 +50,12 @@ class Leto_Product_Loop extends WP_Widget {
 			<option value="date" <?php selected( $orderby, 'date' ); ?>><?php echo __('Date', 'leto'); ?></option>
 			<option value="meta_value_num" <?php selected( $orderby, 'meta_value_num' ); ?>><?php echo __('Best sellers', 'leto'); ?></option>
 			<option value="rand" <?php selected( $orderby, 'rand' ); ?>><?php echo __('Random', 'leto'); ?></option>
+       	</select>
+    </p>
+	<p><label for="<?php echo $this->get_field_id('mode'); ?>"><?php _e('Pick the style for this widget:', 'leto'); ?></label>
+        <select name="<?php echo $this->get_field_name('mode'); ?>" id="<?php echo $this->get_field_id('mode'); ?>">		
+			<option value="grid" <?php selected( $mode, 'grid' ); ?>><?php echo __('Grid', 'leto'); ?></option>
+			<option value="best-seller-slider" <?php selected( $mode, 'best-seller-slider' ); ?>><?php echo __('Carousel', 'leto'); ?></option>
        	</select>
     </p>
 
