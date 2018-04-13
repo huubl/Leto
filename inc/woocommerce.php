@@ -9,7 +9,10 @@
  * Declare support
  */
 function leto_wc_support() {
-    add_theme_support( 'woocommerce' );
+
+	add_theme_support( 'woocommerce', array(
+		'gallery_thumbnail_image_width' => 600,
+	) );
     add_theme_support( 'wc-product-gallery-lightbox' );
 }
 add_action( 'after_setup_theme', 'leto_wc_support' );
