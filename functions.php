@@ -210,6 +210,7 @@ if ( class_exists( 'WooCommerce' ) ) {
  */
 require get_template_directory() . '/inc/page-builder.php';
 
+
 /**
  * Widgets
  */
@@ -220,3 +221,33 @@ require get_template_directory() . '/widgets/class-leto-blog.php';
 require get_template_directory() . '/widgets/class-leto-sidebar-posts.php';
 require get_template_directory() . '/widgets/class-leto-gallery.php';
 require get_template_directory() . '/widgets/class-leto-social.php';
+
+
+/**
+ * Recommend plugins
+ */
+
+add_action( 'tgmpa_register', 'leto_recommended_plugins' );
+function leto_recommended_plugins() {
+
+    $plugins[] = array(
+            'name'               => 'Page Builder by SiteOrigin',
+            'slug'               => 'siteorigin-panels',
+            'required'           => false,
+    );
+
+    $plugins[] = array(
+            'name'               => 'WooCommerce',
+            'slug'               => 'woocommerce',
+            'required'           => false,
+    ); 
+
+    $plugins[] = array(
+            'name'               => 'Kirki',
+            'slug'               => 'kirki',
+            'required'           => false,
+    );      
+
+    tgmpa( $plugins);
+
+}
