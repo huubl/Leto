@@ -226,6 +226,7 @@ require get_template_directory() . '/widgets/class-leto-social.php';
 /**
  * Recommend plugins
  */
+require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'leto_recommended_plugins' );
 function leto_recommended_plugins() {
