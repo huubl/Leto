@@ -140,7 +140,7 @@ function leto_page_banner() {
 
 	if ( $wc_check && is_shop() ) {	
 		$hero = get_the_post_thumbnail_url( get_option( 'woocommerce_shop_page_id' ) );
-	} elseif ( $wc_check && is_product_category() ) {
+	} elseif ( $wc_check &&  ( is_product_category() || is_product_tag() ) ) {
 	    global $wp_query;
 	    $cat = $wp_query->get_queried_object();
 	    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
