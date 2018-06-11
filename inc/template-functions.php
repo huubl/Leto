@@ -72,6 +72,7 @@ add_action( 'wp_head', 'leto_pingback_header' );
 /**
  * Container type check
  */
+
 function leto_container_type() {
 
 	if ( class_exists( 'WooCommerce' ) ) {
