@@ -8118,3 +8118,36 @@ object {
   display: block;
   width: 100%;
 }
+@media (max-width: 767px) {
+  .woocommerce-cart th.product-remove {
+      display: none;
+  }
+
+  .woocommerce-cart table.cart .woocommerce-cart-form__cart-item td.product-subtotal {
+      display: table-cell;
+  }
+
+  .woocommerce-cart .woocommerce-cart-form__contents thead th {
+      padding: 0 0 20px;
+  }
+
+  .woocommerce-cart table.cart td {
+      padding: 20px 0 10px 5px;
+  }
+
+  .cart .quantity {
+      width: auto;
+  }
+
+  .woocommerce-cart table.cart td.actions .coupon input[type=text],
+  .woocommerce-cart table.cart td.actions .coupon input {
+      width: 50%;
+  }
+}
+
+@media (max-width: 560px) {
+  .woocommerce-cart table.cart td.actions .coupon {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
