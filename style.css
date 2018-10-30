@@ -8157,3 +8157,11 @@ object {
     top: 0 !important;
   }   
 }
+@media (min-width: 992px) {
+  .up-sells.upsells .columns-4 .product {
+    width: 25%;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
