@@ -4,7 +4,7 @@ Theme URI: https://athemes.com/theme/leto
 Author: athemes
 Author URI: https://athemes.com
 Description: Leto is a WooCommerce compatible theme that works great for any kind of shop. Leto features color and font options, blog options, integration with the Page Builder plugin so you can easily build your homepage or other pages and many more other useful features.
-Version: 1.0.7
+Version: 1.0.8
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: leto
@@ -8050,7 +8050,7 @@ object {
   position: relative;
 }
 
-.widget_product_search input[type="submit"] {
+.widget_product_search button {
   display: none;
 }
 
@@ -8074,7 +8074,6 @@ object {
   color: #fff;
   font-weight: 600;
 }
-
 .woocommerce .primary-sidebar .widget .widget-title {
   font-size: 18px;
 }
