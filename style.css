@@ -7679,6 +7679,9 @@ object {
   max-width: 90px;
   margin: 0 10px;
 }
+.woocommerce .woocommerce-form__label-for-checkbox span.required::before {
+  display: none;
+} 
 
 /* Wishlist */
 .woocommerce-wishlist .page-header {
