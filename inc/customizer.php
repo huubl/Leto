@@ -194,6 +194,19 @@ Leto_Kirki::add_field( 'leto', array(
 	'priority'    => 10,
 ) );
 Leto_Kirki::add_field( 'leto', array(
+	'type'        => 'radio',
+	'settings'    => 'leto_modal_images_display_mode',
+	'label'       => __( 'Quickview image mode', 'leto' ),
+	'section'     => 'leto_product_archives',
+	'default'     => 'complete',
+	'priority'    => 10,
+	'multiple'    => 1,
+	'choices'     => array(
+		'complete'		=> __( 'Featured image + gallery', 'leto' ),
+		'only-thumb'	=> __( 'Only featured image', 'leto' ),
+	)
+) );
+Leto_Kirki::add_field( 'leto', array(
 	'type'        => 'checkbox',
 	'settings'    => 'leto_hide_product_price',
 	'label'       => esc_attr__( 'Hide product price?', 'leto' ),

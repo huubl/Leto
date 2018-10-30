@@ -19,10 +19,18 @@
 						$gallery_ids = $product->get_gallery_image_ids();
 						$post_id = $post -> ID;
 						$post_thumb = get_post_thumbnail_id( $post_id );
-						echo wp_get_attachment_image( $post_thumb, 'full' );
-						foreach( $gallery_ids as $gallery_id ) {
-							echo wp_get_attachment_image( $gallery_id, 'full' );
-						} 							
+						
+						//Display only thumb or thumb+gallery, based on user choices
+						$display_mode = get_theme_mod( 'leto_modal_images_display_mode', 'complete' );
+						if ( 'complete' === $display_mode ) {
+							echo wp_get_attachment_image( $post_thumb, 'full' );
+							foreach( $gallery_ids as $gallery_id ) {
+								echo wp_get_attachment_image( $gallery_id, 'full' );
+							} 	
+						} else {
+							echo wp_get_attachment_image( $post_thumb, 'full' );
+						}
+
 					?>
 					</div>
 				</div><!-- /.modal-quickview__images -->
