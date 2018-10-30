@@ -8150,4 +8150,7 @@ object {
       width: 100%;
       margin-bottom: 20px;
   }
+  .logged-in .header-navigation.floating {
+    top: 0 !important;
+  }   
 }
