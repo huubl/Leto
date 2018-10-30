@@ -28,7 +28,7 @@ class Leto_Facts extends WP_Widget {
 		$fact_four_text  	= isset( $instance['fact_four_text'] ) ? esc_html( $instance['fact_four_text'] ) :  __( 'Dedicated support', 'leto');
 		$fact_four_icon  	= isset( $instance['fact_four_icon'] ) ? esc_html( $instance['fact_four_icon'] ) : 'ion-ios-people-outline';	
 	?>
-	<p><?php _e('You can find a list of the available icons ', 'leto'); ?><a href="//ionicons.com/" target="_blank"><?php _e('here.', 'leto'); ?></a>&nbsp;<?php _e('Usage example: <strong>ion-paper-airplane</strong>', 'leto'); ?></p>
+	<p><?php _e('You can find a list of the available icons ', 'leto'); ?><a href="//ionicons.com/v2/cheatsheet.html" target="_blank"><?php _e('here.', 'leto'); ?></a>&nbsp;<?php _e('Usage example: <strong>ion-paper-airplane</strong>', 'leto'); ?></p>
 	<p>
 	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'leto'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
