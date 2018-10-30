@@ -8172,3 +8172,13 @@ object {
       margin-right: 3.8%;
   }
 }
+@media only screen and (max-width: 600px) {
+  .post-type-archive-product ul.products .product-category .woocommerce-loop-category__title {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    font-size: 16px;
+  }  
+  .post-type-archive-product ul.products .product-category-desc {
+    margin-left: 0 !important;
+  }
+}
