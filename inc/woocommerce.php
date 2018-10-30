@@ -208,7 +208,11 @@ function leto_loop_pricing_button() {
 	echo 		'<a href="#modal-quickview" class="product-quickview">' . esc_html__( 'Show more', 'leto' ) . '</a>';
 	echo 	'</div>';
 	echo '</div>';
-	get_template_part( 'template-parts/woocommerce', 'modal' );
+	
+	$hide_modal = get_theme_mod( 'leto_disable_quickview' );
+	if ( !$hide_modal ) {
+		get_template_part( 'template-parts/woocommerce', 'modal' );
+	}
 }
 
 /**
