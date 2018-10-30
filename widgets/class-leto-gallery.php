@@ -8,7 +8,7 @@
 class Leto_Gallery extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'leto_gallery_widget', 'description' => __( 'Display your choice of images', 'leto') );
+		$widget_ops = array('classname' => 'leto_gallery_widget', 'description' => __( 'Display your choice of images (Page Builder use only)', 'leto') );
         parent::__construct(false, $name = __('Leto: Gallery', 'leto'), $widget_ops);
 		$this->alt_option_name = 'leto_gallery_widget';
     }

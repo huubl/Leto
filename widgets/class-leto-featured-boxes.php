@@ -8,7 +8,7 @@
 class Leto_Featured_Boxes extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'leto_featured_boxes_widget', 'description' => __( 'Display featured content in up to 4 boxes.', 'leto') );
+		$widget_ops = array('classname' => 'leto_featured_boxes_widget', 'description' => __( 'Display featured content in up to 4 boxes. (Page Builder use only)', 'leto') );
         parent::__construct(false, $name = __('Leto: Featured boxes', 'leto'), $widget_ops);
 		$this->alt_option_name = 'leto_featured_boxes_widget';
     }
