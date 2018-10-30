@@ -8165,3 +8165,10 @@ object {
     padding-right: 15px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .widget ul.products.columns-3 li.product {
+      width: 29.4117647059%;
+      float: left;
+      margin-right: 3.8%;
+  }
+}
