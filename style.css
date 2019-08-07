@@ -4,7 +4,7 @@ Theme URI: https://athemes.com/theme/leto
 Author: athemes
 Author URI: https://athemes.com
 Description: Leto is a WooCommerce compatible theme that works great for any kind of shop. Leto features color and font options, blog options, integration with the Page Builder plugin so you can easily build your homepage or other pages and many more other useful features.
-Version: 1.0.8
+Version: 1.0.11
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: leto
@@ -587,6 +587,10 @@ a:focus, a:hover, a:active {
 }
 .button-underline:hover:after {
   width: 100%;
+}
+
+.cart-mini-wrapper .wc-forward:hover {
+  color: #fff !important;
 }
 
 /*--------------------------------------------------------------
@@ -7679,9 +7683,6 @@ object {
   max-width: 90px;
   margin: 0 10px;
 }
-.woocommerce .woocommerce-form__label-for-checkbox span.required::before {
-  display: none;
-} 
 
 /* Wishlist */
 .woocommerce-wishlist .page-header {
@@ -8053,7 +8054,7 @@ object {
   position: relative;
 }
 
-.widget_product_search button {
+.widget_product_search input[type="submit"] {
   display: none;
 }
 
@@ -8077,6 +8078,7 @@ object {
   color: #fff;
   font-weight: 600;
 }
+
 .woocommerce .primary-sidebar .widget .widget-title {
   font-size: 18px;
 }
@@ -8120,65 +8122,4 @@ object {
 .countdown-descr {
   display: block;
   width: 100%;
-}
-@media (max-width: 767px) {
-  .woocommerce-cart th.product-remove {
-      display: none;
-  }
-
-  .woocommerce-cart table.cart .woocommerce-cart-form__cart-item td.product-subtotal {
-      display: table-cell;
-  }
-
-  .woocommerce-cart .woocommerce-cart-form__contents thead th {
-      padding: 0 0 20px;
-  }
-
-  .woocommerce-cart table.cart td {
-      padding: 20px 0 10px 5px;
-  }
-
-  .cart .quantity {
-      width: auto;
-  }
-
-  .woocommerce-cart table.cart td.actions .coupon input[type=text],
-  .woocommerce-cart table.cart td.actions .coupon input {
-      width: 50%;
-  }
-}
-
-@media (max-width: 560px) {
-  .woocommerce-cart table.cart td.actions .coupon {
-      width: 100%;
-      margin-bottom: 20px;
-  }
-  .logged-in .header-navigation.floating {
-    top: 0 !important;
-  }   
-}
-@media (min-width: 992px) {
-  .up-sells.upsells .columns-4 .product {
-    width: 25%;
-    display: inline-block;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .widget ul.products.columns-3 li.product {
-      width: 29.4117647059%;
-      float: left;
-      margin-right: 3.8%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .post-type-archive-product ul.products .product-category .woocommerce-loop-category__title {
-    margin-left: 0 !important;
-    margin-top: 0 !important;
-    font-size: 16px;
-  }  
-  .post-type-archive-product ul.products .product-category-desc {
-    margin-left: 0 !important;
-  }
 }

@@ -61,9 +61,17 @@ function leto_main_navigation() {
 		<?php if ( $show_menu_additions ) : ?>
 		<ul class="nav-link-right">
 			<li class="nav-link-account">
-				<a href="<?php echo esc_url( wp_login_url() ); ?>" title="Login"><span class="prefix"><?php esc_html_e( 'Login / Register', 'leto' ); ?></span> <span class="suffix ion-person"></span></a>
+				<?php if ( class_exists( 'WooCommerce' ) ) : ?>
+					<?php if ( is_user_logged_in() ) { ?>
+						<a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?>" title="Account"><span class="prefix"><?php esc_html_e( 'My account', 'leto' ); ?></span> <span class="suffix ion-person"></span></a>
+					<?php } 
+					else { ?>
+						<a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?>" title="Login"><span class="prefix"><?php esc_html_e( 'Login/Register', 'leto' ); ?></span> <span class="suffix ion-person"></span></a>
+					<?php } ?>
+				<?php else : ?>
+					<a href="<?php echo esc_url( wp_login_url() ); ?>" title="Login"><span class="prefix"><?php esc_html_e( 'Login / Register', 'leto' ); ?></span> <span class="suffix ion-person"></span></a>
+				<?php endif; ?>
 			</li>
-
 
 			<?php if ( class_exists( 'Woocommerce' ) ) : ?>
 
