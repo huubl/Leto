@@ -61,9 +61,17 @@ function leto_main_navigation() {
 		<?php if ( $show_menu_additions ) : ?>
 		<ul class="nav-link-right">
 			<li class="nav-link-account">
-				<a href="<?php echo esc_url( wp_login_url() ); ?>" title="Login"><span class="prefix"><?php esc_html_e( 'Login / Register', 'leto' ); ?></span> <span class="suffix ion-person"></span></a>
+				<?php if ( class_exists( 'WooCommerce' ) ) : ?>
+					<?php if ( is_user_logged_in() ) { ?>
+						<a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?>" title="Account"><span class="prefix"><?php esc_html_e( 'My account', 'leto' ); ?></span> <span class="suffix ion-person"></span></a>
+					<?php } 
+					else { ?>
+						<a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?>" title="Login"><span class="prefix"><?php esc_html_e( 'Login/Register', 'leto' ); ?></span> <span class="suffix ion-person"></span></a>
+					<?php } ?>
+				<?php else : ?>
+					<a href="<?php echo esc_url( wp_login_url() ); ?>" title="Login"><span class="prefix"><?php esc_html_e( 'Login / Register', 'leto' ); ?></span> <span class="suffix ion-person"></span></a>
+				<?php endif; ?>
 			</li>
-
 
 			<?php if ( class_exists( 'Woocommerce' ) ) : ?>
 
@@ -143,7 +151,7 @@ function leto_page_banner() {
 	} elseif ( $wc_check &&  ( is_product_category() || is_product_tag() ) ) {
 	    global $wp_query;
 	    $cat = $wp_query->get_queried_object();
-	    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+	    $thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
 	    $hero = wp_get_attachment_url( $thumbnail_id );
 	} elseif ( is_page() ) {
 		global $post;
