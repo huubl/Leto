@@ -151,7 +151,7 @@ function leto_page_banner() {
 	} elseif ( $wc_check &&  ( is_product_category() || is_product_tag() ) ) {
 	    global $wp_query;
 	    $cat = $wp_query->get_queried_object();
-	    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+	    $thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
 	    $hero = wp_get_attachment_url( $thumbnail_id );
 	} elseif ( is_page() ) {
 		global $post;
